@@ -50,3 +50,8 @@ html{
 	float: right;
 	text-align: right;
 }
+.header-menu-logo{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
