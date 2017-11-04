@@ -11,7 +11,8 @@ html{
 	background: #ccc;
 	margin-bottom: 10px;
 }
-.wrapper li{
+.wrapper li,
+.footer__main li{
 	list-style:  none;
 }
 .empty{
