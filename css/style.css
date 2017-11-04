@@ -11,6 +11,9 @@ html{
 	background: #ccc;
 	margin-bottom: 10px;
 }
+.wrapper li{
+	list-style:  none;
+}
 .empty{
 	height: 120px;
 }
