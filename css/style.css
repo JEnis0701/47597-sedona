@@ -58,20 +58,47 @@ h1,h2,h3,h4,h5,h6{
 .header-menu{
 	padding: 0 6% 0 6%;
 }
+
+.header-nav-left,
+.header-nav-right{
+	width: 40%;
+	display: flex;
+	justify-content: space-between;
+}
+.header-nav-left{
+	float: left;
+}
+.header-nav-left .header-menu-item{
+	text-align: left;
+	width: 100%;
+}
+.header-nav-right{
+	float: right;
+}
+.header-nav-right .header-menu-item{
+	text-align: right;
+	width: 100%;
+}
+
 .header-menu-item{
 	float: left;
 	width: 20%;
 	padding: 15px 0 15px 0;
 }
 .header-menu-link{
+	display: block;
 	color: #000;
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: 1s;
 }
-.header-menu-link:hover{
+.header-menu-link:hover,
+.header-menu-link:focus{
 	color: #81b3d2;
+}
+.header-menu-link:focus{
+	outline: none;
 }
 .header-menu-link:active{
 	color: #cacaca;
@@ -80,10 +107,6 @@ h1,h2,h3,h4,h5,h6{
 	color: #766357;
 }
 
-.item-right{
-	float: right;
-	text-align: right;
-}
 .header-menu-logo{
 	position: absolute;
 	left: 50%;
@@ -262,12 +285,21 @@ h1,h2,h3,h4,h5,h6{
 	background: #766357;
 	cursor: pointer;
 	transition: 1s;
+	margin-bottom: 5px;
 }
-.button:hover{
+
+.button:hover,
+.button:focus{
 	background: #604e43;
+	
+}
+.button:focus{
+	box-shadow: 0 0 0 3px #fff,
+				0 0 0 6px #604e43;
 }
 .button:active{
 	background: #503e33;
+	box-shadow: none;
 }
 .button:active .button-text{
 	color: #928a85;
@@ -333,8 +365,12 @@ h1,h2,h3,h4,h5,h6{
 	transition: 1s;
 	
 }
-.social-item:hover{
+.social-item:hover,
+.social-item:focus{
 	background: #669ec0;
+}
+.social-item:focus{
+	outline: none;
 }
 .social-item:active{
 	background: #5496bd;
@@ -377,9 +413,13 @@ svg{
 	fill: #231f20;
 	transition: 1s;
 }
-.footer-logo-img:hover svg{
+.footer-logo-img:hover svg,
+.footer-logo-img:focus svg{
 	fill: #81b3d2;
 } 
+.footer-logo-img:focus{
+	outline: none;
+}
 .footer-logo-img:active svg{
 	fill: #bdbbbc;
 } 
@@ -422,8 +462,12 @@ svg{
 	transition: 1s;
 }
 .breadcrams-link:hover,
+.breadcrams-link:focus,
 .breadcrams-link-active{
 	color: #81b3d2;
+}
+.breadcrams-link:focus{
+	outline: none;
 }
 .breadcrams-link:active{
 	color: #000;
@@ -448,9 +492,16 @@ svg{
 	transition: 1s;
 }
 .triangle-top>svg:hover,
-.triangle-down>svg:hover{
+.triangle-down>svg:hover,
+.triangle-top>svg:focus,
+.triangle-down>svg:focus{
 	fill: #231f20;
 }
+.triangle-top>svg:focus,
+.triangle-down>svg:focus{
+	outline: none;
+}
+
 .triangle-top>svg:active,
 .triangle-down>svg:active,
 .triangle-down-active>svg{
@@ -513,8 +564,13 @@ svg{
 	text-decoration: none;
 	padding: 5px 15px;
 }
-.hotel-more-link:hover{
+.hotel-more-link:hover,
+.hotel-more-link:focus{
 	background: #669ec0;
+}
+.hotel-more-link:focus{
+	box-shadow: 0 0 0 3px #fff,
+				0 0 0 6px #2f7cc0;
 }
 .hotel-more-link:active{
 	background: #5496bd;
@@ -527,8 +583,13 @@ svg{
 	outline: none;
 	padding: 6px 15px 7px 15px;
 }
-.button-hotel-book:hover{
+.button-hotel-book:hover,
+.button-hotel-book:focus{
 	background: #604e43;
+}
+.button-hotel-book:focus{
+	box-shadow: 0 0 0 3px #fff,
+				0 0 0 6px #604e43;
 }
 .button-hotel-book:active{
 	background: #503e33;
