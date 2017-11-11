@@ -451,7 +451,7 @@ svg{
 	display: block;
 }
 .price{
-	background: url(../img/filter-bg.png)no-repeat center center;
+	background: #496e88 url(../img/filter-bg.png)no-repeat center center;
 	background-size: cover;
 }
 .filter-main{
