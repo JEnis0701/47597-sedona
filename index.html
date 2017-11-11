@@ -123,6 +123,38 @@
 	</section>
 	<div class="map-container">
 		<img src="img/map.png" class="map-img" width="1200" height="570" alt="Карта. Седона.">
+		<form action="echo" class="findhotel" method="post">
+			<p class="findhotel-date">
+				<label for="datearrival" class="findhotel-datearrival">
+					<span>дата заезда</span>
+					<input type="date" id="datearrival" />
+				</label>
+				
+			</p>
+			
+			<p class="findhotel-date">
+				<label for="datecheckout" class="findhotel-datecheckout">
+					<span>дата выезда</span>
+					<input type="date" id="datecheckout" />
+				</label>
+			</p>
+			
+			<p class="findhotel-date">
+				<label for="date-people" class="date-people">
+					<span>взрослые</span>
+					<span>-</span>
+					<input type="text" id="date-people">
+					<span>+</span>
+				</label>
+				<label for="date-people" class="date-people">
+					<span>дети</span>
+					<span>-</span>
+					<input type="text" id="date-people">
+					<span>+</span>
+				</label>
+			</p>
+			<button class="findhotel-submit" type="submit">найти</button>
+		</form>
 	</div>
 	
 

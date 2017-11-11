@@ -15,6 +15,7 @@ h1,h2,h3,h4,h5,h6{
 	margin: 0;
 	font-weight: normal;
 }
+
 .layout-positioner{
 	max-width: 1200px;
 	margin: 0 auto;
@@ -280,7 +281,8 @@ h1,h2,h3,h4,h5,h6{
 	display: block;
 }
 .button{
-	padding: 30px 140px 30px 140px;
+	padding: 30px 0;
+	width: 51%;
 	border: none;
 	background: #766357;
 	cursor: pointer;
@@ -316,12 +318,30 @@ h1,h2,h3,h4,h5,h6{
 
 .map-container{
 	background: #f7f4ef;
+	position: relative;
 }
 
 .map-img{
 	display: block;
 	width: 1200px;
 	height: 475px;
+}
+.findhotel{
+	width: 51%;
+	background: #fff;
+	position: absolute;
+	padding: 55px 50px 55px 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 0;
+	
+}
+.findhotel-date{
+	width: 100%;
+	
+}
+.data-number:focus{
+	outline: 5px solid red;
 }
 
 /*footer*/
@@ -426,6 +446,35 @@ svg{
 
 /*HOTELLS*/
 
+/*form*/
+.structure-comfort{
+	display: block;
+}
+.price{
+	background: url(../img/filter-bg.png)no-repeat center center;
+	background-size: cover;
+}
+.filter-main{
+	padding: 30px 6% 30px 6%;
+}
+.filter-content-left{
+	float: left;
+	width: 40%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	outline: 2px solid blue;
+}
+.filter-content-right{
+	float: right;
+	width: 40%;
+	outline: 2px solid blue;
+}
+.filter-content{
+	text-align: right;
+}
+
+/*breadcrums*/
 .find-hotels{
 	padding: 40px 6% 40px 6%;
 	border-bottom: 1px solid #e5e5e5;
