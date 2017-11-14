@@ -5,9 +5,10 @@
 	<meta name="viewport" content="width=device-width">
 	<title>HTML Academy: Седона HOTEL</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="hotel-page">
 
 	<div class="wrapper">
    		<div class="wrapper-main layout-positioner">
@@ -40,61 +41,54 @@
 			<section class="price">
 				<h2 class="visability-hidden">Здесь вы можете выбрать отель</h2>
 					<div class="filter-main clearfix">
-						<div class="filter-content-left">
-							<div class="filter-content">
-									<form action="#" class="filter-hotel" method="post">
-										<p class="filter-structure">
-										<p class="structure-title">инфраструктура</p>
-											<label for="comfort" class="structure-comfort">
-												<input type="checkbox" />
-												<span>бассейн</span>
-											</label>
-											<label for="comfort" class="structure-comfort">
-												<input type="checkbox" />
-												<span>парковка</span>
-											</label>
-											<label for="comfort" class="structure-comfort">
-												<input type="checkbox" />
-												<span>wi-fy</span>
-											</label>
-										</p>
-									</form>
-							</div>	<!-- конец filter-content -->
-
-							<div class="filter-content">
-								<form action="#" class="filter-hotel" method="post">
-									<p class="filter-structure">
+						<form action="#" method="post" class="filter-choice">
+							<div class="filter-content-left">
+								<div class="filter-content-structure">
+									<p class="structure-title">инфраструктура</p>
+									<label class="structure-name">
+										<input type="checkbox" class="checkbox-check" checked />
+										<span class="checkbox-text">бассейн</span>
+									</label>
+									<label class="structure-name">
+										<input type="checkbox"  class="checkbox-check" />
+										<span class="checkbox-text">парковка</span>
+									</label>
+									<label class="structure-name">
+										<input type="checkbox"  class="checkbox-check" />
+										<span class="checkbox-text">wi-fy</span>
+									</label>
+								</div>
+								<div class="filter-content-comfort">
 									<p class="structure-title">тип жилья</p>
-										<label for="comfort" class="structure-comfort">
-											<input type="checkbox" />
-											<span>гостиница</span>
-										</label>
-										<label for="comfort" class="structure-comfort">
-											<input type="checkbox" />
-											<span>мотель</span>
-										</label>
-										<label for="comfort" class="structure-comfort">
-											<input type="checkbox" />
-											<span>аппартаменты</span>
-										</label>
-									</p>
-								</form>
-							</div>	<!-- конец filter-content -->
-						</div>	<!-- конец filter-content-left -->
-							
-						<div class="filter-content-right">
-							<div class="filter-content">
-								<form action="#" class="filter-range clearfix" method="post">
-									<p class="range-title">стоимость в сутки</p>
-									<div class="count">
-										<span class="count-from">от</span>
-										<span class="count-to">до</span>
-									</div>
-									<input type="range" class="range-display"/>
-								</form>
-								<button class="filter-button" type="button">показать</button>
-							</div>	<!-- конец filter-content -->	
-						</div><!-- конец filter-content-right -->	
+									<label class="structure-name">
+										<input type="checkbox"  class="checkbox-check"/>
+										<span class="checkbox-text">гостиница</span>
+									</label>
+									<label class="structure-name">
+										<input type="checkbox" class="checkbox-check" />
+										<span class="checkbox-text">мотель</span>
+									</label>
+									<label class="structure-name">
+										<input type="checkbox" class="checkbox-check" />
+										<span class="checkbox-text">аппартаменты</span>
+									</label>
+								</div>
+							</div>
+							<div class="filter-content-rigth">
+								<p class="range-title">стоимость в сутки</p>
+								<div class="filter-count">
+									<p class="count-from">от 0</p>
+									<p class="count-to">до 3000</p>
+								</div>
+								<div class="input filter-range">
+									<input type="range" class="filter-range-count" />
+								</div>
+								<div class="button-content">
+									<button class="button-range">показать</button>
+								</div>
+								
+							</div>
+						</form>					
 					</div><!-- конец filter-main -->
 			</section>
 

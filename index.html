@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width">
 <title>HTML Academy: Седона</title>
 <link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
@@ -126,34 +127,41 @@
 		<img src="img/map.png" class="map-img" width="1200" height="570" alt="Карта. Седона.">
 		<form action="echo" class="findhotel" method="post">
 			<p class="findhotel-date">
-				<label for="datearrival" class="findhotel-datearrival">
-					<span>дата заезда</span>
-					<input type="date" id="datearrival" class="data-number" />
+				<label class="arival">
+					<span class="data-text">дата заезда</span>
+					<input type="text" class="data-number" placeholder="24 апреля 2017"/>
 				</label>
 				
 			</p>
 			
 			<p class="findhotel-date">
-				<label for="datecheckout" class="findhotel-datecheckout">
-					<span>дата выезда</span>
-					<input type="date" id="datecheckout" class="data-number" />
+				<label class="arival">
+					<span class="data-text">дата выезда</span>
+					<input type="text" class="data-number" placeholder="4 июля 2017"/>
 				</label>
 			</p>
 			
-			<p class="findhotel-date">
-				<label for="date-people" class="date-people">
-					<span>взрослые</span>
-					<span>-</span>
-					<input type="text" id="date-people" class="data-number">
-					<span>+</span>
+			<p class="findhotel-date findhotel-date-choice">
+				<label class="check-people">
+					<span class="data-text">взрослые:</span>
+					<span class="people-old">
+						<span class="people-old-minus">-</span>
+						<span class="people-old-number">2</span>
+						<span class="people-old-minus">+</span>
+					</span>
+					
 				</label>
-				<label for="date-people" class="date-people">
-					<span>дети</span>
-					<span>-</span>
-					<input type="text" id="date-people" class="data-number">
-					<span>+</span>
+				<label class="check-people">
+					<span class="data-text">дети:</span>
+					<span class="people-old">
+						<span class="people-old-minus">-</span>
+						<span class="people-old-number">2</span>
+						<span class="people-old-minus">+</span>
+					</span
+					
 				</label>
-			</p>
+			</p>	
+			
 			<button class="findhotel-submit" type="submit">найти</button>
 		</form>
 	</div>
