@@ -1,8 +1,12 @@
 /*Общие настройки шаблона*/
+*{
+	box-sizing: border-box;
+}
 body,
 html{
 	width: 100%;
 	height: 100%;
+	
 }
 body{
 	margin: 0;
@@ -375,11 +379,21 @@ h1,h2,h3,h4,h5,h6{
 	align-items: center;
 }
 .data-number{
-	border: none;
+	border: 0px solid #e5e5e5;
+	outline: none;
 	background: #f2f2f2;
-	padding: 15px;
+	padding: 15px 60px 15px 15px;
 	display: block;
 	width: 75%;
+}
+.data-number:hover{
+	background: #ebebeb;
+}
+.data-number:focus{
+	box-sizing: border-box;
+	background: none;
+	outline: none;
+	border: 2px solid #e5e5e5;
 }
 .calendar{
 	position: absolute;
