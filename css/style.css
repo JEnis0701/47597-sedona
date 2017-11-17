@@ -289,7 +289,6 @@ h1,h2,h3,h4,h5,h6{
 	background: #766357;
 	cursor: pointer;
 	transition: 1s;
-	margin-bottom: 5px;
 }
 
 .button:hover,
@@ -298,8 +297,9 @@ h1,h2,h3,h4,h5,h6{
 	
 }
 .button:focus{
-	box-shadow: 0 0 0 3px #fff,
-				0 0 0 6px #604e43;
+	/*box-shadow: 0 0 0 3px #fff,
+				0 0 0 6px #604e43;*/
+	outline: none;
 }
 .button:active{
 	background: #503e33;
@@ -314,6 +314,27 @@ h1,h2,h3,h4,h5,h6{
 	color: #fff;
 	text-transform: uppercase;
 	transition: 1s;
+}
+.check-people{
+	width: 45%;
+}
+.data-children{
+	margin-left: 40px;
+}
+.people-old{
+	width: 44%;
+	text-align: center;
+	display: block;
+	padding: 10px;
+	background: #f2f2f2;
+	cursor: pointer;
+	font-size: 21px;
+	color: #a9a9a9;
+}
+.people-old-number{
+	margin: 0 20px 0 20px;
+	color: #000;
+	font-size: 14px;
 }
 
 /*map-container*/
@@ -360,6 +381,11 @@ h1,h2,h3,h4,h5,h6{
 	display: block;
 	width: 75%;
 }
+.calendar{
+	position: absolute;
+	right: 60px;
+	cursor: pointer;
+}
 .findhotel-date-choice{
 	display: flex;
 	justify-content: space-between;
@@ -375,13 +401,14 @@ h1,h2,h3,h4,h5,h6{
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
+	transition: 1s;
 }
-/*.check-people{
-	outline: 3px solid blue;
-}*/
-.people-old{
-	/*outline: 2px solid red;*/
-	margin-left: 20px;
+.findhotel-submit:hover{
+	background: #669ec0;
+}
+.findhotel-submit:active{
+	background: #5496bd;
+	color: #94b9d2;
 }
 /*footer*/
 .footer{
