@@ -72,7 +72,7 @@ h1,h2,h3,h4,h5,h6{
 	
 }
 .clearfix:after{
-	content: "";
+	content: '';
 	display: table;
 	clear: both;
 }
@@ -106,7 +106,7 @@ h1,h2,h3,h4,h5,h6{
 		
 }
 .header-menu{
-	padding: 0 6% 0 6%;
+	padding: 0 70px 0 70px;
 }
 
 .header-nav-left,
@@ -247,7 +247,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .advantage-description-number:after,
 .advantage-description-number:before{
-	content: "";
+	content: '';
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -578,7 +578,7 @@ svg{
 	background-size: cover;
 }
 .filter-main{
-	padding: 30px 6% 30px 6%;
+	padding: 30px 70px 30px 70px;
 }
 .filter-choice{
 	display: flex;
@@ -685,7 +685,7 @@ svg{
 
 /*breadcrums*/
 .find-hotels{
-	padding: 40px 6% 40px 6%;
+	padding: 40px 70px 40px 70px;
 	border-bottom: 1px solid #e5e5e5;
 }
 .breadcrams-list{
@@ -773,7 +773,7 @@ svg{
 
 /*hotel-content*/
 .hotels-book{
-	padding: 20px 6% 20px 6%;
+	padding: 20px 70px 20px 70px;
 	border-bottom: 1px solid #e5e5e5;
 }
 .hotel-book{
