@@ -59,15 +59,6 @@ body{
 	margin: 0;
 	padding: 0;	
 }
-h1,h2,h3,h4,h5,h6{
-	margin: 0;
-	font-weight: normal;
-}
-.clearfix:after{
-	content: '';
-	display: table;
-	clear: both;
-}
 .visability-hidden{
 	display: none;
 }
@@ -96,6 +87,8 @@ h1,h2,h3,h4,h5,h6{
 }
 .header-menu{
 	padding: 0 70px 0 70px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .header-nav-left,
@@ -104,25 +97,21 @@ h1,h2,h3,h4,h5,h6{
 	margin: 0;
 	padding: 0;
 	display: flex;
-	justify-content: space-between;
 }
-.header-nav-left{
-	float: left;
-}
+
 .header-nav-left .header-menu-item{
 	text-align: left;
 	width: 100%;
 }
-.header-nav-right{
-	float: right;
-}
+
 .header-nav-right .header-menu-item{
-	text-align: right;
+	/*text-align: right;*/
 	width: 100%;
+	justify-content: flex-end;
 }
 
 .header-menu-item{
-	float: left;
+	display: flex;
 	width: 20%;
 	padding: 15px 0 15px 0;
 }
@@ -232,10 +221,21 @@ h1,h2,h3,h4,h5,h6{
 	text-align: center;
 	color: #fff;
 }
+.title-bottom{
+	display: block;
+}
+.advantage-description-number,
+.advantage-description-text{
+	color: #fff;
+	margin: 0;
+	text-transform: uppercase;
+}
+
 .advantage-description-number{
 	position: relative;
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 }
+
 .advantage-description-number:after,
 .advantage-description-number:before{
 	content: '';
@@ -252,11 +252,7 @@ h1,h2,h3,h4,h5,h6{
 .advantage-description-number:after{
 	left: 110px;
 }
-.advantage-description-number,
-.advantage-description-text{
-	color: #fff;
-	text-transform: uppercase;
-}
+
 
 /*properties*/
 .properties{
@@ -274,7 +270,7 @@ h1,h2,h3,h4,h5,h6{
 	padding: 65px 0 80px 0;
 }
 .properties-bottom .property{
-	padding: 40px 0 55px 0;
+	padding: 45px 0 55px 0;
 }
 .property svg{
 	margin-bottom: 15px;
@@ -295,7 +291,9 @@ h1,h2,h3,h4,h5,h6{
 	
 }
 .property-number{
-	margin-bottom: 20px;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 15px;
 }
 
 /*interesting*/
@@ -307,8 +305,10 @@ h1,h2,h3,h4,h5,h6{
 	font-size: 30px;
 	color: #000;
 	font-weight: bold;
+	margin: 0;
+	padding: 0;
 	text-transform: uppercase;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
 .interesting-text{
 	text-transform: uppercase;
@@ -403,7 +403,7 @@ h1,h2,h3,h4,h5,h6{
 	width: 47%;
 	background: #fff;
 	position: absolute;
-	padding: 35px 50px 55px 50px;
+	padding: 50px 50px 55px 50px;
 	left: 50%;
 	transform: translateX(-50%);
 	top: 0;
@@ -411,6 +411,8 @@ h1,h2,h3,h4,h5,h6{
 }
 .findhotel-date{
 	width: 100%;
+	margin: 0;
+	padding: 0;
 	font-family: 'ptSans','Arial',sans-serif;
 	font-size: 14px;
 	color: #000;
@@ -453,7 +455,7 @@ h1,h2,h3,h4,h5,h6{
 	background: #81b3d2;
 	width: 100%;
 	border: none;
-	padding: 20px 0;
+	padding: 15px 0;
 	font-family: 'ptSans','Arial',sans-serif;
 	font-size: 21px;
 	color: #fff;
@@ -733,7 +735,7 @@ svg{
 	text-align: center;
 }
 .button-range{
-	padding: 10px 35px;
+	padding: 10px 35px 6px 35px;
 	background: none;
 	border: 2px solid #fff;
 	text-align: center;
@@ -837,7 +839,7 @@ svg{
 
 /*hotel-content*/
 .hotels-book{
-	padding: 15px 70px 35px 70px;
+	padding: 20px 70px 35px 70px;
 	border-bottom: 1px solid #e5e5e5;
 }
 .hotel-book{
@@ -862,6 +864,7 @@ svg{
 .hotel-description-title{
 	font-size: 21px;
 	text-transform: uppercase;
+	margin: 0;
 	font-weight: bold;
 	margin-bottom: 5px;
 }
