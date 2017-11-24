@@ -35,37 +35,38 @@
 		</header> <!-- конец header-main -->
 
 		<section class="price">
-			<h2 class="visability-hidden">Здесь вы можете выбрать отель</h2>
+			<h2 class="visually-hidden">Здесь вы можете выбрать отель</h2>
 				<div class="filter-main clearfix">
 					<form action="#" method="post" class="filter-choice">
 						<div class="filter-content-left">
 							<div class="filter-content-structure">
 								<p class="structure-title">инфраструктура</p>
 								<label class="structure-name">
-									<input type="checkbox" class="checkbox-check" checked />
+									<input type="checkbox" class="checkbox-check visually-hidden" checked />
 									<span class="checkbox-text">бассейн</span>
 								</label>
 								<label class="structure-name">
-									<input type="checkbox"  class="checkbox-check" />
+									<input type="checkbox"  class="checkbox-check visually-hidden" />
 									<span class="checkbox-text">парковка</span>
 								</label>
 								<label class="structure-name">
-									<input type="checkbox"  class="checkbox-check" />
+									<input type="checkbox"  class="checkbox-check visually-hidden" />
 									<span class="checkbox-text">wi-fy</span>
 								</label>
 							</div>
 							<div class="filter-content-comfort">
 								<p class="structure-title">тип жилья</p>
-								<label class="structure-name">
-									<input type="checkbox"  class="checkbox-check"/>
+								<label for="check" class="structure-name">
+									<input type="checkbox"  id="check" class="checkbox-check visually-hidden"/>
 									<span class="checkbox-text">гостиница</span>
 								</label>
+								
 								<label class="structure-name">
-									<input type="checkbox" class="checkbox-check" />
+									<input type="checkbox" class="checkbox-check visually-hidden" />
 									<span class="checkbox-text">мотель</span>
 								</label>
 								<label class="structure-name">
-									<input type="checkbox" class="checkbox-check" />
+									<input type="checkbox" class="checkbox-check visually-hidden" />
 									<span class="checkbox-text">аппартаменты</span>
 								</label>
 							</div>
@@ -76,16 +77,19 @@
 							<p class="filter-count-main">
 								<label class="filter-count">
 									<span>от</span>
-									<input class="filter-count-enter" type="text" placeholder="0" />
+									<input class="filter-count-enter" type="text" value="0" />
 								</label>
 								<label class="filter-count">
 									<span>до</span>
-									<input class="filter-count-enter" type="text" placeholder="3000" />
+									<input class="filter-count-enter" type="text" value="3000" />
 								</label>
 							</p>
 							<div class="filter-range">
-								<span class="range range-from"></span>
-								<span class="range range-to"></span>
+								<div class="scale">
+									<div class="bar"></div>
+								</div>
+								<div class="range-toggle range-min"></div>
+								<div class="range-toggle range-max"></div>
 							</div>
 							<div class="button-content">
 								<button class="button-range">показать</button>
@@ -96,7 +100,7 @@
 		</section>
 
 		<section class="find-hotels clearfix">
-			<h2 class="visability-hidden">Отели</h2>
+			<h2 class="visually-hidden">Отели</h2>
 			<ul class="breadcrams-list">
 				<li class="breadcrams-find breadcrams-item">найдено: <span class="find-numb">3</span></li>
 				<li class="breadcrams-sort breadcrams-item">сортировка:</li>
@@ -109,7 +113,7 @@
 		</section>
 			
 		<section class="hotels-content">
-			<h2 class="visability-hidden">Отели</h2>
+			<h2 class="visually-hidden">Отели</h2>
 			<div class="hotels-book">
 				<div class="hotel-book">
 					<div class="hotel-description">

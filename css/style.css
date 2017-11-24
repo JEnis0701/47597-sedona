@@ -59,8 +59,22 @@ body{
 	margin: 0;
 	padding: 0;	
 }
-.visability-hidden{
-	display: none;
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .wrapper{
 	position: relative;
@@ -90,30 +104,25 @@ body{
 	display: flex;
 	justify-content: space-between;
 }
-
 .header-nav-left,
 .header-nav-right{
-	width: 44%;
 	margin: 0;
 	padding: 0;
+	width: 44%;
 	display: flex;
+	flex-wrap: wrap;
 }
 
-.header-nav-left .header-menu-item{
-	text-align: left;
-	width: 100%;
-}
-
-.header-nav-right .header-menu-item{
-	/*text-align: right;*/
-	width: 100%;
+.header-nav-right{
 	justify-content: flex-end;
 }
-
+.header-nav-right .header-menu-item{
+	margin-right: 0;
+	margin-left: 80px;
+}
 .header-menu-item{
-	display: flex;
-	width: 20%;
-	padding: 15px 0 15px 0;
+	margin-right: 80px;
+	padding: 15px 15px;
 }
 .header-menu-link{
 	display: block;
@@ -121,7 +130,7 @@ body{
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
-	transition: 1s;
+	transition: 1s
 }
 .header-menu-link:hover,
 .header-menu-link:focus{
@@ -268,6 +277,7 @@ body{
 	width: 33%;
 	text-align: center;
 	padding: 65px 0 80px 0;
+	flex-grow: 1;
 }
 .properties-bottom .property{
 	padding: 45px 0 55px 0;
@@ -390,14 +400,18 @@ body{
 /*map-container*/
 
 .map-container{
-	background: #f7f4ef;
 	position: relative;
+	height: 570px;
 }
 
 .map-img{
 	display: block;
 	width: 1200px;
-	height: 475px;
+	height: 570px;
+	position: absolute;
+	left: 0;
+	top: 0;
+
 }
 .findhotel{
 	width: 47%;
@@ -407,7 +421,7 @@ body{
 	left: 50%;
 	transform: translateX(-50%);
 	top: 0;
-	
+	z-index: 100;
 }
 .findhotel-date{
 	width: 100%;
@@ -473,15 +487,17 @@ body{
 }
 /*footer*/
 .footer{
-	max-height: 120px;
 	overflow: hidden;
-	
+	background: #fff;
+}
+.footer-main-index{
+	margin-top: -100px;
 }
 .footer-content{
 	width: 80%;
 	margin: 0 auto;
 	overflow: hidden;
-	height: 120px;	
+	padding: 25px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -623,11 +639,36 @@ svg{
 	flex-direction: row;
 	align-items: center;
 }
+.structure-name:before{
+	content: '';
+	display: block;
+	background: url(../img/checkbox-off.svg) no-repeat;
+	width: 25px;
+	height: 25px;
+	margin-right: 25px;
 
-.checkbox-check{
-	margin-right: 30px;
-	flex-wrap: wrap;
 }
+.structure-name:after{
+	content: '';
+	display: none;
+	background: url(../img/checkbox-on.svg) no-repeat;
+	width: 35px;
+	height: 35px;
+	margin-right: 25px;
+
+}
+
+.checkbox-check:checked .structure-name:after{
+	content: '';
+	display: block;
+	background: url(../img/checkbox-on.svg) no-repeat;
+	width: 35px;
+	height: 35px;
+	margin-right: 25px;
+}
+/*.checkbox-check{
+	flex-wrap: wrap;
+}*/
 .checkbox-text,
 .checkbox-check{
 	font: inherit;
@@ -637,7 +678,7 @@ svg{
 	width: 30%;
 }
 .range-title{
-	margin-bottom: 8px;
+	margin: 16px 0 8px 0;
 }
 .filter-content-main{
 	margin: 0;
@@ -648,7 +689,8 @@ svg{
 	justify-content: space-between;
 	border: 2px solid #fff;
 	position: relative;
-	margin: 0 0 10px 0;
+	margin: 0;
+	margin-bottom: 25px;
 	padding: 5px 0;
 }
 .filter-count-main:after{
@@ -657,8 +699,9 @@ svg{
 	position: absolute;
 	border: 1px solid #fff;
 	left: 50%;
-	transform: translateX(-50%);
-	height: 65%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	height: 20px ;
 }
 .filter-count{
 	width: 45%;
@@ -689,44 +732,45 @@ svg{
 .filter-range{
 	position: relative;
 	margin-bottom: 20px;
-	height: 20px;
+	cursor: pointer;
 }
-.filter-range:after{
-	content: '';
-	display: block;
+.filter-range .scale{
+	height: 2px;
+	background: rgba(255,255,255, 0.3);
+}
+.filter-range .bar{
+	width: 80%;
+	height: 2px;
+	background: #fff;
+}
+.range-toggle{
 	position: absolute;
-	width: 100%;
-	border: 1px solid #fff;
-	top: 50%;
-	transform: translateY(-50%);
-}
-.range{
-	display: inline-block;
 	width: 20px;
 	height: 20px;
-	background: #fff;
-	position: absolute;
-	left: 0;
-	top: 50%;
+	border-radius: 50%;
 	margin-top: -10px;
-	border-radius: 50%;
-}
-.range:after{
-	content: '';
-	display: block;
-	width: 6px;
-	height: 6px;
-	border-radius: 50%;
-	background: #ababab;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-left: -3px;
-	transform: translateY(-50%);
-	z-index: 100;
+	background: #fff;box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
 
 }
-.range-to{
+.range-toggle:after{
+	content: '';
+	position: absolute;
+	width: 4px;
+	height: 4px;
+	background: #ababab;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: 1s;
+}
+.range-toggle:hover.range-toggle:after{
+	background: #1c4f80;
+}
+.range-min{
+	left: 0;
+}
+.range-max{
 	left: 80%;
 }
 
@@ -736,7 +780,7 @@ svg{
 }
 .button-range{
 	padding: 10px 35px 6px 35px;
-	background: none;
+	background: transparent;
 	border: 2px solid #fff;
 	text-align: center;
 	font-family: 'ptSans','Arial',sans-serif;
@@ -745,8 +789,13 @@ svg{
 	text-transform: uppercase;
 	color: #fff;
 	cursor: pointer;
+	transition-property: background,color;
+	transition-duration: 6s;
 }
-
+.button-range:hover{
+	background-color: #fff;
+	color: #000;
+}
 /*breadcrums*/
 .find-hotels{
 	padding: 30px 70px 40px 70px;
