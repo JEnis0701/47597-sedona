@@ -161,7 +161,7 @@ img{
 	position: relative;
 	width: 100%;
 	height: 720px;
-	background: url(../img/img_header.jpg);
+	background: #ddebf4 url(../img/img_header.jpg);
 	background-size: cover;
 }
 .inro-header-welcome:after{
