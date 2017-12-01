@@ -196,7 +196,7 @@ img{
 	color: #000;
 	width: 40%;
 	margin: 0 auto;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 	text-transform: uppercase;
 
 
@@ -298,7 +298,7 @@ img{
 	flex-grow: 1;
 }
 .properties-bottom .property{
-	padding: 45px 0 55px 0;
+	padding: 50px 0 55px 0;
 }
 .property svg{
 	margin-bottom: 25px;
@@ -308,7 +308,7 @@ img{
 	color: #000;
 	width: 40%;
 	margin: 0 auto;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -321,7 +321,7 @@ img{
 .property-number{
 	margin: 0;
 	padding: 0;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 /*interesting*/
@@ -352,6 +352,10 @@ img{
 	display: block;
 }
 .button{
+	font-family: 'ptSans','Arial',sans-serif;
+	font-size: 21px;
+	color: #fff;
+	font-weight: bold;
 	padding: 30px 0;
 	width: 47%;
 	border: none;
@@ -399,31 +403,50 @@ img{
 	padding: 10px;
 	background: #f2f2f2;
 	font-size: 21px;
+	position: relative;
 }
-.people-old-plus,
-.people-old-minus{
+.people-old:before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	background: #a9a9a9;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: 5px;
+}
+.people-old:before:hover .people-old:before{
+	
+	background: #000;
+}
+
+.people-old-plus{
 	transition: 0.5s;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-45%);
+	font-size: 22px;
+	margin-left: 20px;
 }
 
 
-.people-old-plus:hover,
-.people-old-minus:hover{
+.people-old-plus:hover{
 	color: #000;
 }
-.people-old-plus:active,
-.people-old-minus:active{
+.people-old-plus:active{
 	color: #81b3d2;
 }
 .people-old-number{
+	font-family: 'ptSans','Arial',sans-serif;
+	font-size: 14px;
+	color: #000;
+	font-weight: bold;
 	width: 25%;
 	outline: none;
 	border: none;
 	background: #f2f2f2;
 	text-align: center;
-	margin: 0 20px 0 20px;
-	font-size: 14px;
-	color: #000;
-	font-weight: bold;
 	cursor: pointer;
 }
 
@@ -463,22 +486,27 @@ img{
 	color: #000;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 }
 
 .arival{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 }
 .data-number{
+	display: block;
+	width: 75%;
+	font-family: 'ptSans','Arial',sans-serif;
+	font-size: 14px;
+	color: #000;
+	font-weight: bold;
+	text-transform: uppercase;
 	border: 2px solid transparent;
 	outline: none;
 	background: #f2f2f2;
 	padding: 15px 60px 15px 15px;
-	display: block;
-	width: 75%;
-	font-size: 14px;
 }
 .data-number:hover{
 	background: #ebebeb;
@@ -492,10 +520,16 @@ img{
 	right: 60px;
 	cursor: pointer;
 }
+.calendar path:hover{
+	fill : #000;
+}
+.calendar path:active{
+	fill : #81b3d2;
+}
 .findhotel-date-choice{
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 45px;
+	margin-bottom: 50px;
 }
 .findhotel-submit{
 	background: #81b3d2;
@@ -607,7 +641,7 @@ svg{
 	fill: #231f20;
 	transition: 1s;
 	display: block;
-	margin-left: 10px;
+	margin-left: 25px;
 }
 .footer-logo-img:hover svg,
 .footer-logo-img:focus svg{
@@ -731,7 +765,9 @@ svg{
 	width: 30%;
 }
 .range-title{
-	margin: 16px 0 8px 0;
+	margin: 0;
+	margin-top: 16px;
+	margin-bottom: 10px;
 }
 .filter-content-main{
 	margin: 0;
@@ -758,25 +794,23 @@ svg{
 	height: 20px ;
 }
 .filter-count{
-	width: 45%;
+	width: 15%;
 	text-align: center;
 	font-family: 'ptSans','Arial',sans-serif;
 	font-size: 14px;
-	font-weight: bold;
 	text-transform: uppercase;
 	color: #fff;
-	text-align: center;
+	margin: 0 auto;
 }
 
 .filter-count-enter{
-	width: 30%;
+	width: 50%;
 	background: none;
 	outline: none;
 	border: none;
 	cursor: pointer;
 	color: #fff;
 	font-size: 14px;
-	text-align: center;
 }
 
 .filter-count-enter::-webkit-input-placeholder{
@@ -785,7 +819,7 @@ svg{
 }
 .filter-range{
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	cursor: pointer;
 }
 .filter-range .scale{
@@ -951,7 +985,6 @@ svg{
 }
 .hotel-description{
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: center;
 	width: 41%;
@@ -979,6 +1012,10 @@ svg{
 .hotel-description-title:active{
 	color: rgba(0,0,0, .3);
 }
+.hotel-price{
+
+	margin-left: 35px;
+}
 .hotel-price-text{
 	text-transform: uppercase;
 	margin: 0;
@@ -993,10 +1030,13 @@ svg{
 	display: inline-block;
 	vertical-align: middle;
 	background: #81b3d2;
-	font-size: 14px;
 	color: #fff;
 	text-transform: uppercase;
 	transition: 1s;
+	font-family: 'ptSans','Arial',sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 .hotel-more-link{
 	text-decoration: none;
@@ -1015,11 +1055,15 @@ svg{
 	color: #adcce0;
 }
 .button-hotel-book{
+	font-family: 'ptSans','Arial',sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
 	background: #766357;
 	cursor: pointer;
 	border: none;
 	outline: none;
-	padding: 6px 15px 7px 15px;
+	padding: 7px 15px 6px 15px;
 }
 .button-hotel-book:hover,
 .button-hotel-book:focus{
