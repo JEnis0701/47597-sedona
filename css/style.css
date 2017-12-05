@@ -1,19 +1,19 @@
 /*устанавливаем шрифты*/
 @font-face {
-    font-family: 'ptSans';
-    src: url('../fonts/pt_sans-web-regular-webfont.woff2') format('woff2'),
-         url('../fonts/pt_sans-web-regular-webfont.woff') format('woff'),
-         url('../fonts/pt_sans-web-regular-webfont.svg#pt_sansregular') format('svg');
+    font-family: "ptSans";
+    src: url("../fonts/pt_sans-web-regular-webfont.woff2") format("woff2"),
+         url("../fonts/pt_sans-web-regular-webfont.woff") format("woff"),
+         url("../fonts/pt_sans-web-regular-webfont.svg#pt_sansregular") format("svg");
     font-weight: 400;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'ptSans';
-    src: url('../fonts/pt_sans-web-bold-webfont.woff2') format('woff2'),
-         url('../fonts/pt_sans-web-bold-webfont.woff') format('woff'),
-         url('../fonts/pt_sans-web-bold-webfont.svg#pt_sansbold') format('svg');
+    font-family: "ptSans";
+    src: url("../fonts/pt_sans-web-bold-webfont.woff2") format("woff2"),
+         url("../fonts/pt_sans-web-bold-webfont.woff") format("woff"),
+         url("../fonts/pt_sans-web-bold-webfont.svg#pt_sansbold") format("svg");
     font-weight: 700;
     font-style: normal;
 
@@ -21,10 +21,10 @@
 
 
 @font-face {
-    font-family: 'ptSans';
-    src: url('../fonts/pt_sans-web-bolditalic-webfont.woff2') format('woff2'),
-         url('../fonts/pt_sans-web-bolditalic-webfont.woff') format('woff'),
-         url('../fonts/pt_sans-web-bolditalic-webfont.svg#pt_sansbold_italic') format('svg');
+    font-family: "ptSans";
+    src: url("../fonts/pt_sans-web-bolditalic-webfont.woff2") format("woff2"),
+         url("../fonts/pt_sans-web-bolditalic-webfont.woff") format("woff"),
+         url("../fonts/pt_sans-web-bolditalic-webfont.svg#pt_sansbold_italic") format("svg");
     font-weight: 400;
     font-style: italic;
 
@@ -32,10 +32,10 @@
 
 
 @font-face {
-    font-family: 'ptSans';
-    src: url('../fonts/pt_sans-web-italic-webfont.woff2') format('woff2'),
-         url('../fonts/pt_sans-web-italic-webfont.woff') format('woff'),
-         url('../fonts/pt_sans-web-italic-webfont.svg#pt_sansitalic') format('svg');
+    font-family: "ptSans";
+    src: url("../fonts/pt_sans-web-italic-webfont.woff2") format("woff2"),
+         url("../fonts/pt_sans-web-italic-webfont.woff") format("woff"),
+         url("../fonts/pt_sans-web-italic-webfont.svg#pt_sansitalic") format("svg");
     font-weight: bold;
     font-style: italic;
 
@@ -52,7 +52,7 @@ html{
 
 body{
 	-webkit-font-smoothing: antialiased;
-	font-family: 'ptSans','Arial',sans-serif;
+	font-family: "ptSans","Arial",sans-serif;
 	line-height: 1.42;
 	font-size: 14px;
 	background: #f2f2f2;
@@ -61,21 +61,21 @@ body{
 	padding: 0;	
 }
 .visually-hidden:not(:focus):not(:active),
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
-  position: absolute;
+	input[type="checkbox"].visually-hidden,
+	input[type="radio"].visually-hidden {
+	position: absolute;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
 
-  white-space: nowrap;
+	white-space: nowrap;
 
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  	clip-path: inset(100%);
+  	clip: rect(0 0 0 0);
+  	overflow: hidden;
 }
 img{
 	width: 100%;
@@ -100,14 +100,19 @@ img{
 
 
 /*header*/
-.header-main{
+.header-main-sedona{
 	position: relative;
-		
+	width: 100%;
+	height: 720px;
+	background: #ddebf4 url(../img/img_header.jpg);
+	background-size: cover;
+	margin-bottom: 63px;
 }
 .header-menu{
 	padding: 0 70px 0 70px;
 	display: flex;
 	justify-content: space-between;
+	background: #fff;
 }
 .header-nav-left,
 .header-nav-right{
@@ -127,7 +132,10 @@ img{
 }
 .header-menu-item{
 	margin-right: 120px;
-	padding: 15px 15px 15px 0;
+	padding: 20px 30px 15px 0;
+}
+.header-menu-item:nth-child(2n){
+	padding-right: 0;
 }
 .header-menu-link{
 	display: block;
@@ -157,21 +165,14 @@ img{
 	transform: translateX(-50%);
 	z-index: 100;
 }
-.header-welcome{
-	position: relative;
-	width: 100%;
-	height: 720px;
-	background: #ddebf4 url(../img/img_header.jpg);
-	background-size: cover;
-}
 .inro-header-welcome:after{
-	content: '';
+	content: "";
 	width: 100%;
 	height: 60px;
 	display: block;
 	position: absolute;
 	background: url(../img/effect.svg) no-repeat;
-	top: 476px;
+	top: 507px;
 }
 .header-welcome-img{
 	position: absolute;
@@ -179,10 +180,10 @@ img{
 	height: 352px;
 	left: 50%;
 	margin-left: -229px;
-	top: 75px;
+	top: 130px;
 }
 .header-welcome-description{
-	padding: 45px 0;
+	padding: 65px 0 0 0;
 	text-align: center;
 	background: #fff;
 	width: 100%;
@@ -196,7 +197,7 @@ img{
 	color: #000;
 	width: 40%;
 	margin: 0 auto;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 	text-transform: uppercase;
 
 
@@ -265,7 +266,7 @@ img{
 
 .advantage-description-number:after,
 .advantage-description-number:before{
-	content: '';
+	content: "";
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -294,21 +295,21 @@ img{
 .property{
 	width: 33%;
 	text-align: center;
-	padding: 65px 0 80px 0;
+	padding: 65px 0 85px 0;
 	flex-grow: 1;
 }
 .properties-bottom .property{
-	padding: 50px 0 55px 0;
+	padding: 50px 0 60px 0;
 }
 .property svg{
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 .property-title{
 	font-size: 21px;
 	color: #000;
 	width: 40%;
 	margin: 0 auto;
-	margin-bottom: 15px;
+	margin-bottom: 14px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -327,7 +328,7 @@ img{
 /*interesting*/
 .interesting{
 	text-align: center;
-	padding: 60px 0 0 0;
+	padding: 50px 0 0 0;
 }
 .interesting-title{
 	font-size: 30px;
@@ -352,7 +353,7 @@ img{
 	display: block;
 }
 .button{
-	font-family: 'ptSans','Arial',sans-serif;
+	font-family: "ptSans","Arial",sans-serif;
 	font-size: 21px;
 	color: #fff;
 	font-weight: bold;
@@ -361,7 +362,7 @@ img{
 	border: none;
 	background: #766357;
 	cursor: pointer;
-	transition: 1s;
+	transition: 0.6s;
 }
 
 .button:hover,
@@ -390,37 +391,79 @@ img{
 }
 .check-people{
 	width: 50%;
+
 }
 .data-children{
 	margin-left: 40px;
 }
 .people-old{
-	display: block;
-	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	width: 48%;
 	cursor: pointer;
 	text-align: center;
 	color: #a9a9a9;
-	padding: 10px;
+	padding: 10px 0 10px 0;
 	background: #f2f2f2;
 	font-size: 21px;
 	position: relative;
 }
-.people-old:before{
-	content: '';
+
+.button-minus,
+.button-plus{
+	border: none;
+	background: none;
+	outline: none;
+	position: relative;
+
+}
+.button-minus:before{
+	content: "";
 	display: block;
 	position: absolute;
 	width: 10px;
 	height: 2px;
 	background: #a9a9a9;
-	top: 50%;
-	transform: translateY(-50%);
-	margin-left: 5px;
+	left: 5px;
+	top: 6px;
+	cursor: pointer;
+	transition: 0.6s;
 }
-.people-old:before:hover .people-old:before{
-	
+.button-plus:before,
+.button-plus:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	background: #a9a9a9;
+	left: 0;
+	top: 6px;
+	cursor: pointer;
+	transition: 0.6s;
+	outline: none;
+}
+.button-plus:after{
+	transform: rotate(90deg);
+}
+.button-minus:hover.button-minus:before,
+.button-plus:hover.button-plus:before,
+.button-plus:hover.button-plus:after{
 	background: #000;
+	
 }
+.button-minus:active.button-minus:before,
+.button-plus:active.button-plus:before,
+.button-plus:active.button-plus:after{
+	background: #81b3d2;
+	
+}
+.arival.check-children{
+	padding-right: 35px;
+	display: flex;
+	justify-content: flex-end;
 
+}
 .people-old-plus{
 	transition: 0.5s;
 	position: absolute;
@@ -429,8 +472,6 @@ img{
 	font-size: 22px;
 	margin-left: 20px;
 }
-
-
 .people-old-plus:hover{
 	color: #000;
 }
@@ -438,7 +479,7 @@ img{
 	color: #81b3d2;
 }
 .people-old-number{
-	font-family: 'ptSans','Arial',sans-serif;
+	font-family: "ptSans","Arial",sans-serif;
 	font-size: 14px;
 	color: #000;
 	font-weight: bold;
@@ -467,26 +508,31 @@ img{
 	top: 0;
 
 }
+.findhotel.findhotel-show{
+	display: block;
+}
 .findhotel{
+	display: none;
 	width: 47%;
 	background: #fff;
 	position: absolute;
-	padding: 50px 50px 55px 50px;
+	padding: 52px 50px 55px 52px;
 	left: 50%;
 	transform: translateX(-50%);
 	top: 0;
 	z-index: 100;
+	
 }
 .findhotel-date{
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: 'ptSans','Arial',sans-serif;
+	font-family: "ptSans","Arial",sans-serif;
 	font-size: 14px;
 	color: #000;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin-bottom: 16px;
+	margin-bottom: 20px;
 }
 
 .arival{
@@ -498,7 +544,7 @@ img{
 .data-number{
 	display: block;
 	width: 75%;
-	font-family: 'ptSans','Arial',sans-serif;
+	font-family: "ptSans","Arial",sans-serif;
 	font-size: 14px;
 	color: #000;
 	font-weight: bold;
@@ -520,23 +566,23 @@ img{
 	right: 60px;
 	cursor: pointer;
 }
-.calendar path:hover{
+.calendar:hover path{
 	fill : #000;
 }
-.calendar path:active{
+.calendar:active path{
 	fill : #81b3d2;
 }
 .findhotel-date-choice{
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 50px;
+	margin-bottom: 55px;
 }
 .findhotel-submit{
 	background: #81b3d2;
 	width: 100%;
 	border: none;
 	padding: 15px 0;
-	font-family: 'ptSans','Arial',sans-serif;
+	font-family: "ptSans","Arial",sans-serif;
 	font-size: 21px;
 	color: #fff;
 	font-weight: bold;
@@ -560,7 +606,7 @@ img{
 	margin-top: -100px;
 }
 .footer-content{
-	width: 80%;
+	width: 84%;
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 25px 0;
@@ -574,13 +620,15 @@ img{
 	width: 42%;
 }
 .visit-text{
+	font-family: "ptSans","Arial",sans-serif;
 	font-size: 21px;
 	font-weight: bold;
 	color: #000;
 	text-transform: uppercase;
+	padding-left: 35px;
 }
 .social-list{
-	width: 16%;
+	width: 15%;
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -627,21 +675,24 @@ svg{
 	width: 42%;
 	display: flex;
 	justify-content: flex-end;
-	align-items: center;
 }
 .footer-nameSite{
 	text-transform: uppercase;
+	margin-right: 8px;
+	display: flex;
+	align-items: center;
 }
 .footer-logo-img{	
 	width: 120px;
 	height: 40px;
 	cursor: pointer;
+	margin-right: 0px;
 }
 .footer-logo-img>svg{
 	fill: #231f20;
 	transition: 1s;
 	display: block;
-	margin-left: 25px;
+	width: 120px;
 }
 .footer-logo-img:hover svg,
 .footer-logo-img:focus svg{
@@ -665,7 +716,7 @@ svg{
 	background-size: cover;
 }
 .filter-main{
-	padding: 15px 70px 5px 70px;
+	padding: 30px 70px 10px 70px;
 }
 .filter-choice{
 	display: flex;
@@ -680,19 +731,20 @@ svg{
 
 .structure-title,
 .range-title{
-	font-family: 'ptSans','Arial',sans-serif;
+	font-family: "ptSans","Arial",sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 16px;
 	color: #fff;
-	margin-bottom: 30px;
+	margin: 0;
+	margin-bottom: 25px;
 }
 .filter-content-structure,
 .filter-content-comfort{
 	width: 40%;
 	display: flex;
 	flex-direction: column;
-	font-family: 'ptSans','Arial',sans-serif;
+	font-family: "ptSans","Arial",sans-serif;
 	font-size: 14px;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -710,7 +762,7 @@ svg{
 }
 .filter-content-structure label:before,
 .filter-content-comfort label:before{
-	content: '';
+	content: "";
 	display: inline-block;
 	vertical-align: middle;
 	position: absolute;
@@ -725,7 +777,7 @@ svg{
 
 .filter-content-structure label:after,
 .filter-content-comfort label:after{
-	content: '';
+	content: "";
 	opacity: 0;
 	vertical-align: middle;
 	position: absolute;
@@ -746,16 +798,6 @@ svg{
 	opacity: 1;
 
 }
-
-.filter-content-structure label:hover:after,
-.filter-content-comfort label:hover:after{
-	opacity: 1;
-}
-.filter-content-structure input:hover + label:before,
-.filter-content-comfort input:hover + label:before{
-	display: none;
-}
-
 .checkbox-text,
 .checkbox-check{
 	font: inherit;
@@ -766,8 +808,7 @@ svg{
 }
 .range-title{
 	margin: 0;
-	margin-top: 16px;
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 }
 .filter-content-main{
 	margin: 0;
@@ -780,11 +821,11 @@ svg{
 	border: 2px solid #fff;
 	position: relative;
 	margin: 0;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 	padding: 5px 0;
 }
 .filter-count-main:after{
-	content: '';
+	content: "";
 	display: block;
 	position: absolute;
 	border: 1px solid #fff;
@@ -794,9 +835,9 @@ svg{
 	height: 20px ;
 }
 .filter-count{
-	width: 15%;
+	width: 21%;
 	text-align: center;
-	font-family: 'ptSans','Arial',sans-serif;
+	font-family: "ptSans","Arial",sans-serif;
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #fff;
@@ -819,7 +860,7 @@ svg{
 }
 .filter-range{
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 32px;
 	cursor: pointer;
 }
 .filter-range .scale{
@@ -841,7 +882,7 @@ svg{
 
 }
 .range-toggle:after{
-	content: '';
+	content: "";
 	position: absolute;
 	width: 4px;
 	height: 4px;
@@ -871,7 +912,7 @@ svg{
 	background: transparent;
 	border: 2px solid #fff;
 	text-align: center;
-	font-family: 'ptSans','Arial',sans-serif;
+	font-family: "ptSans","Arial",sans-serif;
 	font-size: 14px;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -886,7 +927,7 @@ svg{
 }
 /*breadcrums*/
 .find-hotels{
-	padding: 30px 70px 40px 70px;
+	padding: 30px 70px 28px 70px;
 	border-bottom: 1px solid #e5e5e5;
 }
 .breadcrams-list{
@@ -942,7 +983,7 @@ svg{
 
 }
 .triangle-top{
-	right: 15px;
+	right: 25px;
 }
 
 .triangle-top>svg,
@@ -976,7 +1017,7 @@ svg{
 
 /*hotel-content*/
 .hotels-book{
-	padding: 20px 70px 35px 70px;
+	padding: 23px 70px 31px 70px;
 	border-bottom: 1px solid #e5e5e5;
 }
 .hotel-book{
@@ -1002,7 +1043,7 @@ svg{
 	text-transform: uppercase;
 	margin: 0;
 	font-weight: bold;
-	margin-bottom: 5px;
+	margin-bottom: 7px;
 	cursor: pointer;
 	transition: 0.5s;
 }
@@ -1023,7 +1064,7 @@ svg{
 .price-text{
 	display: inline-block;
 	margin-right: 18px;
-	margin-bottom: 10px;
+	margin-bottom: 12px;
 }
 .hotel-more-link,
 .button-hotel-book{
@@ -1033,7 +1074,7 @@ svg{
 	color: #fff;
 	text-transform: uppercase;
 	transition: 1s;
-	font-family: 'ptSans','Arial',sans-serif;
+	font-family: "ptSans","Arial",sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -1055,7 +1096,7 @@ svg{
 	color: #adcce0;
 }
 .button-hotel-book{
-	font-family: 'ptSans','Arial',sans-serif;
+	font-family: "ptSans","Arial",sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -1063,7 +1104,7 @@ svg{
 	cursor: pointer;
 	border: none;
 	outline: none;
-	padding: 7px 15px 6px 15px;
+	padding: 5px 18px 5px 18px;
 }
 .button-hotel-book:hover,
 .button-hotel-book:focus{
@@ -1078,22 +1119,24 @@ svg{
 	color: #928a85;
 }
 .hotels-rating{
-	width: 20%;
-	position: relative;
+	width: 11%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: right;
 }
 .rating-svg{
-	text-align: right;
 	margin: 0;
+	padding-top: 5px;
 }
 .hotel-rating{
-	position: absolute;
-	width: 70%;
-	bottom: 0;
-	right: 0;
 	margin: 0;
-	color: #666666;
+	font-family: "ptSans","Arial",sans-serif;
+	font-size: 14px;
+	color: #666;
+	font-weight: normal;
 	text-transform: uppercase;
-	text-align: center;
-	padding: 10px 0 6px 30px;
+	padding: 5px 13px 5px 0;
 	background: #f2f2f2;
 }
+

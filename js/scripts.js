@@ -1,30 +1,13 @@
-//карта
+var button = document.querySelector(".button");
+var buttonsPlus = document.querySelectorAll(".button-plus");
+var buttonsMinus = document.querySelectorAll(".button-minus");
 
 
-$(function(){
 
-	ymaps.ready(init);
-    var myMap,
-        myPlacemark;
+button.addEventListener("click", function(){
 
-    function init(){     
-        myMap = new ymaps.Map("map", {
-            center: [34.86947625, -111.76029326],
-            zoom: 11
-        });
+    var findHotel = document.querySelector(".findhotel");
+    findHotel.classList.toggle("findhotel-show");
 
-        myMap.controls
-        	.remove('zoomControl');
-
-        myMap.behaviors.disable([
-        	'drag',
-        	'scrollZoom'
-        ]);
-
-        myPlacemark = new ymaps.Placemark([34.87195183, -111.75626900], { 
-        			  hintContent: 'Седона', 
-        			  balloonContent: 'США'
-         });
-        myMap.geoObjects.add(myPlacemark);
-    }
 });
+
