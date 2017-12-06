@@ -143,7 +143,8 @@ img{
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
-	transition: 1s
+	transition: 1s;
+	cursor: pointer;
 }
 .header-menu-link:hover,
 .header-menu-link:focus{
@@ -884,7 +885,8 @@ svg{
 	height: 20px;
 	border-radius: 50%;
 	margin-top: -10px;
-	background: #fff;box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+	background: #fff;
+	box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
 
 }
 .range-toggle:after{

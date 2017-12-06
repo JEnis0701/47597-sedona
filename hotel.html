@@ -13,18 +13,18 @@
 			<nav class="header-menu">
 				<ul class="header-nav-left">
 					<li class="header-menu-item">
-						<a href="#" class="header-menu-link">информация</a>
+						<a href="info.html" class="header-menu-link">информация</a>
 					</li>
 					<li class="header-menu-item">
-						<a href="#" class="header-menu-link">фото и видео</a>
+						<a href="foto.html" class="header-menu-link">фото и видео</a>
 					</li>
 				</ul>
 				<ul class="header-nav-right">
 					<li class="header-menu-item">
-						<a href="#" class="header-menu-link">карта штата</a>
+						<a href="map.html" class="header-menu-link">карта штата</a>
 					</li>
 					<li class="header-menu-item">
-						<a href="#" class="header-menu-link header-menu-link-active">гостиницы</a>
+						<a class="header-menu-link header-menu-link-active">гостиницы</a>
 					</li>
 					
 				</ul>
@@ -69,13 +69,13 @@
 						<div class="filter-content-rigth">
 							<p class="range-title">стоимость в сутки Р:</p>
 							<p class="filter-count-main">
-								<label class="filter-count">
+								<label class="filter-count" for="count-from">
 									<span>от</span>
-									<input class="filter-count-enter" type="text" value="0" />
+									<input class="filter-count-enter" id="count-from" type="text" value="0" />
 								</label>
-								<label class="filter-count">
+								<label class="filter-count" for="count-to">
 									<span>до</span>
-									<input class="filter-count-enter" type="text" value="3000" />
+									<input class="filter-count-enter" type="text" id="count-to" value="3000" />
 								</label>
 							</p>
 							<div class="filter-range">
