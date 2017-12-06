@@ -500,6 +500,11 @@ img{
 
 
 /*map-container*/
+.iframe{
+	width: 1200px;
+	height: 570px;
+	frameborder: 0;
+}
 
 .map-container{
 	position: relative;
