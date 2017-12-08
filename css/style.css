@@ -378,7 +378,8 @@ img{
 	font-size: 21px;
 	color: #fff;
 	font-weight: bold;
-	padding: 31px 140px;
+	width: 568px;
+	padding: 31px 0;
 	border: none;
 	background: #766357;
 	cursor: pointer;
@@ -444,8 +445,8 @@ img{
 	width: 10px;
 	height: 2px;
 	background: #a9a9a9;
-	left: 5px;
-	top: 6px;
+	left: 2px;
+	top: 8px;
 	cursor: pointer;
 	transition: 0.6s;
 }
@@ -515,19 +516,22 @@ img{
 /*map-container*/
 .iframe{
 	width: 1200px;
-	height: 570px;
+	height: 472px;
 	border: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*z-index: 50;*/
 }
 
 .map-container{
 	position: relative;
-	height: 570px;
+	height: 472px;
 }
 
 .map-img{
 	display: block;
 	width: 1200px;
-	height: 570px;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -540,8 +544,7 @@ img{
 	display: none;
 	background: #fff;
 	position: absolute;
-	padding-left: 36px;
-    padding-right: 36px;
+	width: 568px;
     padding-top: 55px;
     padding-bottom: 30px;
 	left: 50%;
@@ -551,7 +554,7 @@ img{
 	
 }
 .findhotel-date{
-	width: 92%;
+	width: 80%;
 	margin: 0 auto;
 	padding: 0;
 	font-family: "ptSans","Arial",sans-serif;
@@ -586,7 +589,7 @@ img{
 	border: 2px solid transparent;
 	outline: none;
 	background: #f2f2f2;
-	padding: 10px 60px 10px 15px;
+	padding: 10px 60px 10px 9px;
 }
 .data-number:hover{
 	background: #ebebeb;
@@ -597,7 +600,7 @@ img{
 }
 .calendar{
 	position: absolute;
-	right: 60px;
+	right: 65px;
 	cursor: pointer;
 }
 .calendar:hover path{
@@ -636,9 +639,7 @@ img{
 .footer{
 	overflow: hidden;
 	background: #fff;
-}
-.footer-main-index{
-	margin-top: -100px;
+	
 }
 .footer-content{
 	width: 84%;
@@ -649,6 +650,7 @@ img{
 	justify-content: space-between;
 	align-items: center;
 	text-align: left;
+
 }
 
 .footer-visit{
@@ -691,6 +693,7 @@ img{
 }
 svg{
 	fill: #fff;
+	margin-left: 2px;
 }
 .social-item:active svg{
 	fill: #88b6d1;
@@ -941,10 +944,12 @@ svg{
 
 .button-content{
 	width: 100%;
-	text-align: center;
 }
 .button-range{
-	padding: 10px 35px 6px 35px;
+	/*padding: 10px 35px 6px 35px;*/
+	width: 137px;
+	margin: 0 82px;
+	padding: 8px 0;
 	background: transparent;
 	border: 2px solid #fff;
 	text-align: center;
@@ -1044,6 +1049,7 @@ svg{
 .triangle-down>svg:active,
 .triangle-down-active>svg{
 	fill: #81b3d2;
+	margin-left: -4px;
 }
 
 .triangle-down{
@@ -1091,7 +1097,13 @@ svg{
 }
 .hotel-price{
 
-	margin-left: 35px;
+	margin-left: 32px;
+}
+.price-price.price-price-motel{
+	margin-left: 58px;
+}
+.price-price.price-price-appertment{
+	margin-left: 10px;
 }
 .hotel-price-text{
 	text-transform: uppercase;
@@ -1099,8 +1111,11 @@ svg{
 }
 .price-text{
 	display: inline-block;
-	margin-right: 18px;
+	/*vertical-align: middle;*/
 	margin-bottom: 12px;
+}
+.price-price{
+	margin-left: 30px;
 }
 .hotel-more-link,
 .button-hotel-book{
@@ -1117,7 +1132,7 @@ svg{
 }
 .hotel-more-link{
 	text-decoration: none;
-	padding: 5px 15px;
+	padding: 5px 17px;
 }
 .hotel-more-link:hover,
 .hotel-more-link:focus{
