@@ -411,7 +411,8 @@ img{
 	transition: 1s;
 }
 .check-people{
-	width: 50%;
+	
+	/*margin-right: 43px;*/
 
 }
 .data-children{
@@ -420,14 +421,15 @@ img{
 .people-old{
 	display: flex;
 	justify-content: space-around;
-	width: 47%;
+	width: 115px;
 	cursor: pointer;
 	text-align: center;
 	color: #a9a9a9;
-	padding: 15px 0 15px 0;
+	padding: 10px 0 10px 0;
 	background: #f2f2f2;
 	font-size: 21px;
 	position: relative;
+	margin-left: 0;
 }
 
 .button-minus,
@@ -480,10 +482,8 @@ img{
 	
 }
 .arival.check-children{
-	padding-right: 30px;
 	display: flex;
 	justify-content: flex-end;
-
 }
 .people-old-plus{
 	transition: 0.5s;
@@ -538,15 +538,17 @@ img{
 
 }
 .findhotel.findhotel-show{
-	display: block;
+	display: none;
 }
 .findhotel{
-	display: none;
+	display: block;
 	background: #fff;
 	position: absolute;
 	width: 568px;
     padding-top: 55px;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
+    padding-left: 54px;
+    padding-right: 54px;
 	left: 50%;
 	transform: translateX(-50%);
 	top: 0;
@@ -554,7 +556,6 @@ img{
 	
 }
 .findhotel-date{
-	width: 80%;
 	margin: 0 auto;
 	padding: 0;
 	font-family: "ptSans","Arial",sans-serif;
@@ -562,7 +563,7 @@ img{
 	color: #000;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin-bottom: 25px;
+	margin-bottom: 30px;
 }
 
 .arival{
@@ -580,7 +581,7 @@ img{
 }
 .data-number{
 	display: block;
-	width: 75%;
+	width: 345px;
 	font-family: "ptSans","Arial",sans-serif;
 	font-size: 14px;
 	color: #000;
@@ -589,8 +590,9 @@ img{
 	border: 2px solid transparent;
 	outline: none;
 	background: #f2f2f2;
-	padding: 10px 60px 10px 9px;
+	padding: 9px 60px 9px 9px;
 }
+
 .data-number:hover{
 	background: #ebebeb;
 }
@@ -612,7 +614,7 @@ img{
 .findhotel-date-choice{
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 49px;
+	margin-bottom: 53px;
 }
 .findhotel-submit{
 	background: #81b3d2;
