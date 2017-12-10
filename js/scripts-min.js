@@ -1,0 +1,1 @@
+var button=document.querySelector(".button"),buttonsPlus=document.querySelectorAll(".button-plus"),buttonsMinus=document.querySelectorAll(".button-minus");button.addEventListener("click",function(){document.querySelector(".findhotel").classList.toggle("findhotel-show")});

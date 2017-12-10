@@ -1,44 +1,38 @@
 /*устанавливаем шрифты*/
 @font-face {
-    font-family: "ptSans";
-    src: url("../fonts/pt_sans-web-regular-webfont.woff2") format("woff2"),
-         url("../fonts/pt_sans-web-regular-webfont.woff") format("woff"),
-         url("../fonts/pt_sans-web-regular-webfont.svg#pt_sansregular") format("svg");
-    font-weight: 400;
-    font-style: normal;
-
+	font-family: "ptSans";
+	src: url("../fonts/pt_sans-web-regular-webfont.woff2") format("woff2"),
+	url("../fonts/pt_sans-web-regular-webfont.woff") format("woff"),
+	url("../fonts/pt_sans-web-regular-webfont.svg#pt_sansregular") format("svg");
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: "ptSans";
-    src: url("../fonts/pt_sans-web-bold-webfont.woff2") format("woff2"),
-         url("../fonts/pt_sans-web-bold-webfont.woff") format("woff"),
-         url("../fonts/pt_sans-web-bold-webfont.svg#pt_sansbold") format("svg");
-    font-weight: 700;
-    font-style: normal;
-
+	font-family: "ptSans";
+	src: url("../fonts/pt_sans-web-bold-webfont.woff2") format("woff2"),
+	url("../fonts/pt_sans-web-bold-webfont.woff") format("woff"),
+	url("../fonts/pt_sans-web-bold-webfont.svg#pt_sansbold") format("svg");
+	font-weight: 700;
+	font-style: normal;
 }
 
-
 @font-face {
-    font-family: "ptSans";
-    src: url("../fonts/pt_sans-web-bolditalic-webfont.woff2") format("woff2"),
-         url("../fonts/pt_sans-web-bolditalic-webfont.woff") format("woff"),
-         url("../fonts/pt_sans-web-bolditalic-webfont.svg#pt_sansbold_italic") format("svg");
-    font-weight: 400;
-    font-style: italic;
-
+	font-family: "ptSans";
+	src: url("../fonts/pt_sans-web-bolditalic-webfont.woff2") format("woff2"),
+	url("../fonts/pt_sans-web-bolditalic-webfont.woff") format("woff"),
+	url("../fonts/pt_sans-web-bolditalic-webfont.svg#pt_sansbold_italic") format("svg");
+	font-weight: 400;
+	font-style: italic;
 }
 
-
 @font-face {
-    font-family: "ptSans";
-    src: url("../fonts/pt_sans-web-italic-webfont.woff2") format("woff2"),
-         url("../fonts/pt_sans-web-italic-webfont.woff") format("woff"),
-         url("../fonts/pt_sans-web-italic-webfont.svg#pt_sansitalic") format("svg");
-    font-weight: bold;
-    font-style: italic;
-
+	font-family: "ptSans";
+	src: url("../fonts/pt_sans-web-italic-webfont.woff2") format("woff2"),
+	url("../fonts/pt_sans-web-italic-webfont.woff") format("woff"),
+	url("../fonts/pt_sans-web-italic-webfont.svg#pt_sansitalic") format("svg");
+	font-weight: bold;
+	font-style: italic;
 }
 /*Общие настройки шаблона*/
 html{
@@ -73,9 +67,9 @@ body{
 
 	white-space: nowrap;
 
-  	clip-path: inset(100%);
-  	clip: rect(0 0 0 0);
-  	overflow: hidden;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 img{
 	width: 100%;
@@ -102,6 +96,8 @@ img{
 /*header*/
 .header-main-sedona{
 	position: relative;
+	left: 0;
+	top: 0;
 	width: 100%;
 	height: 720px;
 	background: #ddebf4 url(../img/img_header.jpg);
@@ -113,6 +109,7 @@ img{
 	display: flex;
 	justify-content: space-between;
 	background: #fff;
+	max-height: 55px;
 }
 .header-nav-left,
 .header-nav-right{
@@ -121,6 +118,7 @@ img{
 	width: 44%;
 	display: flex;
 	flex-wrap: wrap;
+	z-index: 100;
 }
 
 .header-nav-right{
@@ -146,6 +144,9 @@ img{
 	transition: 1s;
 	cursor: pointer;
 }
+.logo-link{
+	display: block;
+}
 .header-menu-link:hover,
 .header-menu-link:focus{
 	color: #81b3d2;
@@ -156,12 +157,15 @@ img{
 .header-menu-link:active{
 	color: #cacaca;
 }
-.header-menu-link-active{
+.header-menu-link-active,
+.header-menu-link-active:hover,
+.header-menu-link-active:active{
 	color: #766357;
 }
-
 .header-menu-logo{
 	position: absolute;
+	height: 70px;
+	width: 138px;
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 100;
@@ -367,11 +371,10 @@ img{
 	margin: 0 auto 45px auto;
 }
 .interesting-text .interesting-text-top{
-	display: block;
-	
+	margin: 0;
 }
-.interesting-text .interesting-text-botton{
-	display: block;
+.interesting-text .interesting-text-bottom{
+	margin: 0;
 }
 .button{
 	font-family: "ptSans","Arial",sans-serif;
@@ -410,9 +413,9 @@ img{
 	text-transform: uppercase;
 	transition: 1s;
 }
-.check-people{
+.check-people-old{
 	
-	/*margin-right: 43px;*/
+	margin-right: 42px;
 
 }
 .data-children{
@@ -431,7 +434,10 @@ img{
 	position: relative;
 	margin-left: 0;
 }
-
+.people-old.people-children{
+	position: absolute;
+	right: 0;
+}
 .button-minus,
 .button-plus{
 	border: none;
@@ -447,7 +453,7 @@ img{
 	width: 10px;
 	height: 2px;
 	background: #a9a9a9;
-	left: 6px;
+	left: 0;
 	top: 8px;
 	cursor: pointer;
 	transition: 0.6s;
@@ -481,9 +487,15 @@ img{
 	background: #81b3d2;
 	
 }
+.button-minus:focus.button-minus:before,
+.button-plus:focus.button-plus:before,
+.button-plus:focus.button-plus:after{
+	background: #000;
+	
+}
 .arival.check-children{
 	display: flex;
-	justify-content: flex-end;
+	margin-left: 51px;
 }
 .people-old-plus{
 	transition: 0.5s;
@@ -504,7 +516,7 @@ img{
 	font-size: 14px;
 	color: #000;
 	font-weight: bold;
-	width: 25%;
+	width: 10px;
 	outline: none;
 	border: none;
 	background: #f2f2f2;
@@ -512,6 +524,9 @@ img{
 	cursor: pointer;
 }
 
+.people-old-number:focus{
+	color: #000;
+}
 
 /*map-container*/
 .iframe{
@@ -521,7 +536,7 @@ img{
 	position: absolute;
 	left: 0;
 	top: 0;
-	/*z-index: 50;*/
+	z-index: 50;
 }
 
 .map-container{
@@ -545,15 +560,14 @@ img{
 	background: #fff;
 	position: absolute;
 	width: 568px;
-    padding-top: 55px;
-    padding-bottom: 25px;
-    padding-left: 54px;
-    padding-right: 54px;
+	padding-top: 55px;
+	padding-bottom: 25px;
+	padding-left: 54px;
+	padding-right: 54px;
 	left: 50%;
 	transform: translateX(-50%);
 	top: 0;
 	z-index: 100;
-	
 }
 .findhotel-date{
 	margin: 0 auto;
@@ -588,7 +602,6 @@ img{
 	font-weight: bold;
 	text-transform: uppercase;
 	border: 2px solid transparent;
-	outline: none;
 	background: #f2f2f2;
 	padding: 9px 60px 9px 9px;
 }
@@ -611,10 +624,13 @@ img{
 .calendar:active path{
 	fill : #81b3d2;
 }
+.calendar:focus path{
+	border: 2px solid red;
+}
 .findhotel-date-choice{
 	display: flex;
-	justify-content: space-between;
 	margin-bottom: 53px;
+	position: relative;
 }
 .findhotel-submit{
 	background: #81b3d2;
@@ -638,10 +654,9 @@ img{
 	color: #94b9d2;
 }
 /*footer*/
-.footer{
+.footer-main{
 	overflow: hidden;
 	background: #fff;
-	
 }
 .footer-content{
 	width: 84%;
@@ -754,9 +769,7 @@ svg{
 .price{
 	background: #496e88 url(../img/filter-bg.jpg)no-repeat center center;
 	background-size: cover;
-}
-.filter-main{
-	padding: 30px 70px 10px 70px;
+	padding: 30px 70px 8px 70px;
 }
 .filter-choice{
 	display: flex;
@@ -838,6 +851,19 @@ svg{
 	opacity: 1;
 
 }
+
+.filter-content-structure input:disabled + label:before,
+.filter-content-comfort input:disabled + label:before{
+	opacity: 0.5;
+	
+}
+
+.filter-content-structure input:disabled + label:after,
+.filter-content-comfort input:disabled + label:after{
+	opacity: 0.5;
+	background: none;
+}
+
 .checkbox-text,
 .checkbox-check{
 	font: inherit;
@@ -875,17 +901,21 @@ svg{
 	height: 20px ;
 }
 .filter-count{
-	width: 21%;
-	text-align: center;
+	width: 160px;
 	font-family: "ptSans","Arial",sans-serif;
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #fff;
 	margin: 0 auto;
 }
-
+.filter-count.filter-count-left{
+	padding-left: 62px;
+}
+.filter-count.filter-count-right{
+	padding-left: 54px;
+}
 .filter-count-enter{
-	width: 50%;
+	width: 40px;
 	background: none;
 	outline: none;
 	border: none;
@@ -1010,6 +1040,7 @@ svg{
 .breadcrams-link:focus,
 .breadcrams-link-active{
 	color: #81b3d2;
+	text-decoration: none;
 }
 .breadcrams-link:focus{
 	outline: none;
@@ -1026,7 +1057,8 @@ svg{
 
 }
 .triangle-top{
-	right: 25px;
+	right: 28px;
+	
 }
 
 .triangle-top>svg,
@@ -1051,22 +1083,16 @@ svg{
 .triangle-down>svg:active,
 .triangle-down-active>svg{
 	fill: #81b3d2;
-	margin-left: -4px;
 }
-
 .triangle-down{
-	right: 0;
+	right: 5px;
 }
-
-
 /*hotel-content*/
-.hotels-book{
-	padding: 23px 70px 31px 70px;
-	border-bottom: 1px solid #e5e5e5;
-}
 .hotel-book{
 	display: flex;
 	justify-content: space-between;
+	padding: 23px 70px 31px 70px;
+	border-bottom: 1px solid #e5e5e5
 }
 .hotel-description{
 	display: flex;
