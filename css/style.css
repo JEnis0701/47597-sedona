@@ -1095,7 +1095,7 @@ svg{
 .hotel-book{
 	display: flex;
 	justify-content: space-between;
-	padding: 23px 70px 31px 70px;
+	padding: 23px 70px 30px 70px;
 	border-bottom: 1px solid #e5e5e5
 }
 .hotel-description{
